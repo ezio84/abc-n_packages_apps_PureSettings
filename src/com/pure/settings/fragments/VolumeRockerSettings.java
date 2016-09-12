@@ -28,7 +28,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class MultiMediaSettings extends SettingsPreferenceFragment {
+public class VolumeRockerSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
     private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
@@ -41,7 +41,7 @@ public class MultiMediaSettings extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.multimedia_settings);
+        addPreferencesFromResource(R.xml.volumerocker_settings);
 
         final ContentResolver resolver = getContentResolver();
 
