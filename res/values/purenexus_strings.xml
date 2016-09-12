@@ -21,10 +21,12 @@
     <!-- Lockscreen double tap to sleep -->
     <string name="double_tap_sleep_anywhere_title">Double-tap to sleep anywhere</string>
     <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on the lockscreen to put the device to sleep</string>
+    <!-- Navbar fragment -->
+    <string name="navbar_settings_title">Navigation bar</string>
     <!-- Notification panel fragment -->
     <string name="notification_drawer_settings_title">Notification drawer</string>
     <!-- StatusBar fragment -->
-    <string name="statusbar_settings_title">Statusbar</string>
+    <string name="statusbar_settings_title">Status bar</string>
     <!-- double tap statusbar to sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
