@@ -15,9 +15,15 @@
  */
 package com.pure.settings.fragments;
 
+import android.app.Activity;
+import android.app.ActivityManagerNative;
+import android.app.IActivityManager;
+import android.content.ContentResolver;
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
+import android.provider.Settings;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
@@ -26,10 +32,22 @@ import com.android.settings.SettingsPreferenceFragment;
 
 public class PowerSettings extends SettingsPreferenceFragment {
 
+    private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final Activity activity = getActivity();
+        final ContentResolver resolver = activity.getContentResolver();
+
         addPreferencesFromResource(R.xml.power_settings);
+
+        boolean proximityCheckOnWake = getResources().getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWake);
+        if (!proximityCheckOnWake) {
+            getPreferenceScreen().removePreference(findPreference(KEY_PROXIMITY_WAKE));
+            Settings.System.putInt(resolver, Settings.System.PROXIMITY_ON_WAKE, 0);
+        }
     }
 
     @Override
