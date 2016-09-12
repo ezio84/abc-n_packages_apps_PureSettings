@@ -44,6 +44,11 @@
     </PreferenceCategory>
 
     <PreferenceScreen
+        android:fragment="com.pure.settings.fragments.PowerSettings"
+        android:key="pure_power_settings"
+        android:title="@string/power_settings_title"/>
+
+    <PreferenceScreen
         android:fragment="com.pure.settings.fragments.VolumeRockerSettings"
         android:key="pure_volumerocker_settings"
         android:title="@string/volumerocker_settings_title"/>

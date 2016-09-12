@@ -29,8 +29,10 @@
     <string name="notification_drawer_settings_title">Notification drawer</string>
     <!-- StatusBar fragment -->
     <string name="statusbar_settings_title">Status bar</string>
-    <!-- double tap statusbar to sleep -->
+    <!-- Power fragment -->
+    <string name="power_settings_title">Power</string>
 
+    <!-- double tap statusbar to sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
     <!-- Navbar double tap to sleep -->
