@@ -27,6 +27,11 @@
             android:title="@string/lockscreen_settings_title"/>
 
         <PreferenceScreen
+            android:fragment="com.pure.settings.fragments.MultiMediaSettings"
+            android:key="pure_multimedia_settings"
+            android:title="@string/multimedia_settings_title"/>
+
+        <PreferenceScreen
             android:fragment="com.pure.settings.fragments.NavBarSettings"
             android:key="pure_navbar_settings"
             android:title="@string/navbar_settings_title"/>
