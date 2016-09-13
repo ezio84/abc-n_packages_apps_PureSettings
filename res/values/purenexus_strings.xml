@@ -50,4 +50,7 @@
     <!-- Proximity wake -->
      <string name="proximity_wake_title">Prevent accidental wake up</string>
      <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
+    <!-- hide power menu -->
+     <string name="powermenu_lockscreen_title">Power menu on lock screen</string>
+     <string name="powermenu_lockscreen_summary">Show power menu on the lock screen</string>
 </resources>
