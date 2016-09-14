@@ -31,4 +31,9 @@
         android:title="@string/volume_rocker_music_controls_title"
         android:defaultValue="true"
         android:dependency="volume_rocker_wake" />
+
+    <PreferenceScreen
+        android:key="volume_steps"
+        android:title="@string/volume_steps_title"
+        android:fragment="com.pure.settings.fragments.VolumeSteps" />
 </PreferenceScreen>
