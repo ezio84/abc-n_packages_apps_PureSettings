@@ -53,4 +53,7 @@
     <!-- hide power menu -->
      <string name="powermenu_lockscreen_title">Power menu on lock screen</string>
      <string name="powermenu_lockscreen_summary">Show power menu on the lock screen</string>
+    <!-- Toast Icons -->
+     <string name="toast_icon_title">Toast icon</string>
+     <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
 </resources>
