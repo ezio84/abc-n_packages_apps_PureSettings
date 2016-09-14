@@ -31,10 +31,10 @@
             android:key="pure_navbar_settings"
             android:title="@string/navbar_settings_title"/>
 
-        <!--<PreferenceScreen
+        <PreferenceScreen
             android:fragment="com.pure.settings.fragments.NotificationDrawerSettings"
             android:key="pure_notification_drawer_settings"
-            android:title="@string/notification_drawer_settings_title"/>-->
+            android:title="@string/notification_drawer_settings_title"/>
 
         <PreferenceScreen
             android:fragment="com.pure.settings.fragments.StatusBarSettings"
