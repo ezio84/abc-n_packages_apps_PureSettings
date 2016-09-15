@@ -97,4 +97,11 @@
     <string name="clock_date_format">Date format</string>
     <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
     <string name="clock_date_string_edittext_summary">Enter string</string>
+    <!-- SystemUI Tuner Parts -->
+    <string name="systemui_tuner_statusbar_title">Status bar items</string>
+    <string name="systemui_tuner_statusbar_summary">Show/hide status bar items</string>
+    <string name="systemui_tuner_navbar_title">Navigation bar items</string>
+    <string name="systemui_tuner_navbar_summary">Edit navigation bar items</string>
+    <string name="systemui_tuner_other_title">Other</string>
+    <string name="misc_title">Miscellaneous settings</string>
 </resources>
