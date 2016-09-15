@@ -103,8 +103,8 @@
     <string name="systemui_tuner_navbar_title">Navigation bar items</string>
     <string name="systemui_tuner_navbar_summary">Edit navigation bar items</string>
     <string name="systemui_tuner_other_title">Other</string>
-    <string name="misc_title">Miscellaneous settings</string>
-
+    <string name="pure_sys">Misc</string>
+    <string name="misc_title">Other</string>
     <!-- Network traffic -->
     <string name="network_traffic_title">Network traffic</string>
     <string name="show_network_traffic_state">Status bar traffic monitor</string>

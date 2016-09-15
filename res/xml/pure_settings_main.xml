@@ -43,14 +43,28 @@
 
     </PreferenceCategory>
 
-    <PreferenceScreen
-        android:fragment="com.pure.settings.fragments.PowerSettings"
-        android:key="pure_power_settings"
-        android:title="@string/power_settings_title"/>
+    <PreferenceCategory
+        android:key="pure_sys"
+        android:title="@string/pure_sys">
 
-    <PreferenceScreen
-        android:fragment="com.pure.settings.fragments.VolumeRockerSettings"
-        android:key="pure_volumerocker_settings"
-        android:title="@string/volumerocker_settings_title"/>
+        <PreferenceScreen
+            android:fragment="com.pure.settings.fragments.PowerSettings"
+            android:key="pure_power_settings"
+            android:title="@string/power_settings_title"/>
 
+        <PreferenceScreen
+            android:fragment="com.pure.settings.fragments.VolumeRockerSettings"
+            android:key="pure_volumerocker_settings"
+            android:title="@string/volumerocker_settings_title"/>
+
+        <PreferenceScreen
+            android:key="systemui_tuner_other"
+            android:title="@string/systemui_tuner_other_title" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.OtherPrefsActivity" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
 </PreferenceScreen>
