@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.view.View;
@@ -42,6 +43,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
+    private static final String STATUS_BAR_CLOCK_SECONDS = "status_bar_clock_seconds";
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String STATUS_BAR_CLOCK_DATE_DISPLAY = "clock_date_display";
     private static final String STATUS_BAR_CLOCK_DATE_STYLE = "clock_date_style";
@@ -52,6 +54,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
 
     private ListPreference mStatusBarClock;
+    private SwitchPreference mClockSeconds;
     private ListPreference mStatusBarAmPm;
     private ListPreference mClockDateDisplay;
     private ListPreference mClockDateStyle;
@@ -65,16 +68,19 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         ContentResolver resolver = getActivity().getContentResolver();
 
         mStatusBarClock = (ListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
-        mStatusBarAmPm = (ListPreference) findPreference(STATUS_BAR_AM_PM);
-        mClockDateDisplay = (ListPreference) findPreference(STATUS_BAR_CLOCK_DATE_DISPLAY);
-        mClockDateStyle = (ListPreference) findPreference(STATUS_BAR_CLOCK_DATE_STYLE);
-
         int clockStyle = Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_CLOCK, 1);
         mStatusBarClock.setValue(String.valueOf(clockStyle));
         mStatusBarClock.setSummary(mStatusBarClock.getEntry());
         mStatusBarClock.setOnPreferenceChangeListener(this);
 
+        mClockSeconds = (SwitchPreference) findPreference(STATUS_BAR_CLOCK_SECONDS);
+        mClockSeconds.setOnPreferenceChangeListener(this);
+        int clockSeconds = Settings.System.getInt(resolver,
+            Settings.System.STATUS_BAR_CLOCK_SECONDS, 0);
+        mClockSeconds.setChecked(clockSeconds != 0);
+
+        mStatusBarAmPm = (ListPreference) findPreference(STATUS_BAR_AM_PM);
         if (DateFormat.is24HourFormat(getActivity())) {
             mStatusBarAmPm.setEnabled(false);
             mStatusBarAmPm.setSummary(R.string.status_bar_am_pm_info);
@@ -86,12 +92,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             mStatusBarAmPm.setOnPreferenceChangeListener(this);
         }
 
+        mClockDateDisplay = (ListPreference) findPreference(STATUS_BAR_CLOCK_DATE_DISPLAY);
         int clockDateDisplay = Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_CLOCK_DATE_DISPLAY, 0);
         mClockDateDisplay.setValue(String.valueOf(clockDateDisplay));
         mClockDateDisplay.setSummary(mClockDateDisplay.getEntry());
         mClockDateDisplay.setOnPreferenceChangeListener(this);
 
+        mClockDateStyle = (ListPreference) findPreference(STATUS_BAR_CLOCK_DATE_STYLE);
         int clockDateStyle = Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_CLOCK_DATE_STYLE, 0);
         mClockDateStyle.setValue(String.valueOf(clockDateStyle));
@@ -135,10 +143,19 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                     resolver, Settings.System.STATUS_BAR_CLOCK, clockStyle);
             mStatusBarClock.setSummary(mStatusBarClock.getEntries()[index]);
             if (clockStyle == 0) {
+                mClockSeconds.setEnabled(false);
+                mStatusBarAmPm.setEnabled(false);
                 mClockDateDisplay.setEnabled(false);
             } else {
+                mClockSeconds.setEnabled(true);
+                mStatusBarAmPm.setEnabled(true);
                 mClockDateDisplay.setEnabled(true);
             }
+            return true;
+        } else if (preference == mClockSeconds) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver, Settings.System.STATUS_BAR_CLOCK_SECONDS,
+                    value ? 1 : 0);
             return true;
         } else if (preference == mStatusBarAmPm) {
             int statusBarAmPm = Integer.valueOf((String) newValue);
