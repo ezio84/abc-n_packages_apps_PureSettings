@@ -26,7 +26,9 @@
     <!-- Navbar fragment -->
     <string name="navbar_settings_title">Navigation bar</string>
     <!-- Notification panel fragment -->
-    <string name="notification_drawer_settings_title">Notifications</string>
+    <string name="notification_drawer_settings_title">Notifications and QS</string>
+    <string name="notifdrawer_notifications_title">Notifications</string>
+    <string name="notifdrawer_qs_title">Quick Settings</string>
     <!-- StatusBar fragment -->
     <string name="statusbar_settings_title">Status bar</string>
     <!-- Power fragment -->
