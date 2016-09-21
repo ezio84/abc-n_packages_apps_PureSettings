@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.dirtyunicorns.dutweaks.preference;
+package com.pure.settings.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
