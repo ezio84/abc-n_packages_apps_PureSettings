@@ -19,6 +19,7 @@ package com.pure.settings;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.PreferenceCategory;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
@@ -26,11 +27,32 @@ import com.android.settings.SettingsPreferenceFragment;
 
 public class PureSettings extends SettingsPreferenceFragment {
 
+    private PreferenceCategory mLedsCategory;
+    private Preference mChargingLeds;
+    private Preference mNotificationLeds;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.pure_settings_main);
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        mLedsCategory = (PreferenceCategory) findPreference("leds");
+        mChargingLeds = (Preference) findPreference("charging_light");
+        mNotificationLeds = (Preference) findPreference("notification_light");
+        if (mChargingLeds != null
+                && !getResources().getBoolean(
+                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
+            mLedsCategory.removePreference(mChargingLeds);
+        }
+        if (mNotificationLeds != null
+                && !getResources().getBoolean(
+                        com.android.internal.R.bool.config_intrusiveNotificationLed)) {
+            mLedsCategory.removePreference(mNotificationLeds);
+        }
+        if (mChargingLeds == null && mNotificationLeds == null) {
+            getPreferenceScreen().removePreference(mLedsCategory);
+        }
     }
 
     @Override
