@@ -20,6 +20,7 @@
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_style_title">Style</string>
     <string name="status_bar_clock">Clock &amp; Date</string>
+    <string name="status_bar_clock_summary">Customize clock and date in statusbar</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_enabled">Enabled</string>
     <string name="clock_disabled">Disabled</string>

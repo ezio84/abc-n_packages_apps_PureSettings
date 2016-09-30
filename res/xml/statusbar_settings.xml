@@ -38,6 +38,6 @@
     <PreferenceScreen
         android:key="statusbarclock"
         android:fragment="com.pure.settings.fragments.StatusbarClock"
-        android:layout="@layout/preference_statusbarclock"
+        android:summary="@string/status_bar_clock_summary"
         android:title="@string/status_bar_clock" />
 </PreferenceScreen>
