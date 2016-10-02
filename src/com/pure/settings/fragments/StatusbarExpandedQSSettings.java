@@ -86,7 +86,7 @@ public class StatusbarExpandedQSSettings extends SettingsPreferenceFragment impl
         mColumnsPortrait =
                 (ListPreference) findPreference(PREF_COLUMNS_PORTRAIT);
         int columnsPortrait = Settings.System.getInt(mResolver,
-                Settings.System.QS_COLUMNS_PORTRAIT, 3);
+                Settings.System.QS_COLUMNS_PORTRAIT, 5);
         mColumnsPortrait.setValue(String.valueOf(columnsPortrait));
         mColumnsPortrait.setSummary(mColumnsPortrait.getEntry());
         mColumnsPortrait.setOnPreferenceChangeListener(this);
