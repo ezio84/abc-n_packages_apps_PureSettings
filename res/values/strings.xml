@@ -236,4 +236,7 @@
     <string name="qs_rows_columns_6_title">6</string>
     <string name="qs_rows_columns_7_title">7</string>
     <string name="qs_rows_columns_8_title">8</string>
+    <!-- Scramble PIN Layout on Lockscreen -->
+    <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
 </resources>
