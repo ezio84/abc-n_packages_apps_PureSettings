@@ -38,7 +38,7 @@
             android:entryValues="@array/values_battery_percent"
             android:persistent="false"
             android:defaultValue="1"/>
-        <com.pure.settings.preferences.SystemSettingCheckBoxPreference
+        <com.pure.settings.preferences.SystemSettingSwitchPreference
             android:key="statusbar_battery_percent_inside"
             android:title="@string/statusbar_percent_inside_title"
             android:summary="@string/statusbar_percent_inside_summary"
@@ -48,12 +48,12 @@
             android:key="statusbar_category_charging"
             android:title="@string/statusbar_category_charging_title">
 
-            <com.pure.settings.preferences.SystemSettingCheckBoxPreference
+            <com.pure.settings.preferences.SystemSettingSwitchPreference
                 android:key="statusbar_battery_charging_image"
                 android:title="@string/statusbar_charging_image_title"
                 android:summary="@string/statusbar_charging_image_summary"
                 android:defaultValue="true"/>
-            <com.pure.settings.preferences.SystemSettingCheckBoxPreference
+            <com.pure.settings.preferences.SystemSettingSwitchPreference
                 android:key="statusbar_battery_charging_color_enable"
                 android:title="@string/statusbar_battery_charging_color_enable_title"
                 android:summary="@string/statusbar_battery_charging_color_enable_summary"
