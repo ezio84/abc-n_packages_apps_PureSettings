@@ -28,6 +28,7 @@
         <com.pure.settings.preferences.SystemSettingSwitchPreference
             android:key="notification_light_color_auto"
             android:title="@string/notification_light_automagic"
+            android:summary="@string/notification_light_automagic_summary"
             android:dependency="notification_light_pulse"
             android:defaultValue="true" />
 
