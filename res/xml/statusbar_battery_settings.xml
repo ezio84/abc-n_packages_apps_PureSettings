@@ -37,7 +37,7 @@
             android:entries="@array/entries_battery_percent"
             android:entryValues="@array/values_battery_percent"
             android:persistent="false"
-            android:defaultValue="2"/>
+            android:defaultValue="1"/>
         <com.pure.settings.preferences.SystemSettingCheckBoxPreference
             android:key="statusbar_battery_percent_inside"
             android:title="@string/statusbar_percent_inside_title"
