@@ -258,4 +258,7 @@
     <string name="statusbar_battery_charging_color_enable_title">Color while charging</string>
     <string name="statusbar_battery_charging_color_enable_summary"></string>
     <string name="battery_enable_title">Show battery</string>
+    <!-- Disable QS on secure Lockscreen -->
+    <string name="lockscreen_qs_disabled_title">No QS when secured</string>
+    <string name="lockscreen_qs_disabled_summary">Disable quick settings tiles on secured lockscreen</string>
 </resources>

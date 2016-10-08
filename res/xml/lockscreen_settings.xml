@@ -18,6 +18,11 @@
             android:title="@string/unlock_scramble_pin_layout_title"
             android:summary="@string/unlock_scramble_pin_layout_summary" />
 
+        <com.pure.settings.preferences.SecureSettingSwitchPreference
+            android:key="lockscreen_qs_disabled"
+            android:title="@string/lockscreen_qs_disabled_title"
+            android:summary="@string/lockscreen_qs_disabled_summary" />
+
         <com.pure.settings.preferences.SystemSettingSwitchPreference
             android:key="double_tap_sleep_anywhere"
             android:title="@string/double_tap_sleep_anywhere_title"
