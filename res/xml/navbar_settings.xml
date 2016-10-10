@@ -13,6 +13,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+        <com.pure.settings.preferences.SecureSettingSwitchPreference
+            android:key="navigation_bar_visible"
+            android:title="@string/navigation_bar_visible_title"
+            android:summary="@string/navigation_bar_visible_summary" />
+
         <com.pure.settings.preferences.SystemSettingSwitchPreference
             android:key="double_tap_sleep_navbar"
             android:title="@string/double_tap_sleep_nav_bar_title"
