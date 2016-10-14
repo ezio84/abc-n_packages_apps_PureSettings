@@ -265,4 +265,9 @@
     <!-- Navbar toggle -->
     <string name="navigation_bar_visible_title">Enable Navbar</string>
     <string name="navigation_bar_visible_summary">Enable or disable navbar (can make your device unusable if you don\'t have an alternative navigation bar)</string>
+    <!-- Lockscreen items clock, date, alarm text -->
+    <string name="lockscreen_items_settings_title">Lockscreen Items</string>
+    <string name="lockscreen_clock_title">Lockscreen clock</string>
+    <string name="lockscreen_date_title">Lockscreen date</string>
+    <string name="lockscreen_alarm_title">Lockscreen alarm text</string>
 </resources>
