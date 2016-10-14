@@ -44,4 +44,10 @@
             android:summary="@string/qs_advanced_data_summary"
             android:defaultValue="false" />
         </PreferenceCategory>
+
+        <com.pure.settings.preferences.SecureSettingSwitchPreference
+            android:key="qs_wifi_easy_toggle"
+            android:title="@string/qs_wifi_easy_toggle_title"
+            android:summary="@string/qs_wifi_easy_toggle_summary"
+            android:defaultValue="false" />
 </PreferenceScreen>
