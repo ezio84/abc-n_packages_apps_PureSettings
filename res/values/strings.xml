@@ -264,7 +264,7 @@
     <string name="lockscreen_qs_disabled_summary">Disable quick settings tiles on secured lockscreen</string>
     <!-- Navbar toggle -->
     <string name="navigation_bar_visible_title">Enable Navbar</string>
-    <string name="navigation_bar_visible_summary">Enable or disable navbar (can make your device unusable if you don\'t have an alternative navigation bar)</string>
+    <string name="navigation_bar_visible_summary">Enable or disable navbar (needs a reboot and can make your device unusable)</string>
     <!-- Lockscreen items clock, date, alarm text -->
     <string name="lockscreen_items_settings_title">Lockscreen Items</string>
     <string name="lockscreen_clock_title">Lockscreen clock</string>
