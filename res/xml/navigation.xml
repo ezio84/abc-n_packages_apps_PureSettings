@@ -16,6 +16,5 @@
      <Preference
         android:key="navigation_options"
         android:fragment="com.pure.settings.fragments.NavbarSettings"
-        android:layout="@layout/preference_navigation"
         android:title="@string/navigationbar_settings_title" />
 </PreferenceScreen>
