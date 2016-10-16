@@ -13,19 +13,4 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-        <com.pure.settings.preferences.SystemSettingSwitchPreference
-            android:key="double_tap_sleep_navbar"
-            android:title="@string/double_tap_sleep_nav_bar_title"
-            android:summary="@string/double_tap_sleep_nav_bar_summary"
-            android:defaultValue="true" />
-
-        <PreferenceScreen
-            android:key="systemui_tuner_navbar"
-            android:title="@string/systemui_tuner_navbar_title"
-            android:summary="@string/systemui_tuner_navbar_summary" >
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.NavBarTunerActivity" />
-        </PreferenceScreen>
 </PreferenceScreen>

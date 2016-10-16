@@ -72,7 +72,7 @@
     <!-- Volume rocker fragment -->
     <string name="volumerocker_settings_title">Volume rocker</string>
     <!-- Navbar fragment -->
-    <string name="navbar_settings_title">Navigation bar</string>
+    <string name="navigation_title">Navigation bar</string>
     <!-- Notification panel fragment -->
     <string name="notification_drawer_settings_title">Notifications and QS</string>
     <string name="notifdrawer_notifications_title">Notifications</string>
@@ -85,9 +85,6 @@
     <!-- double tap statusbar to sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
-    <!-- Navbar double tap to sleep -->
-    <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
-    <string name="double_tap_sleep_nav_bar_summary">Double tap on the navigation bar to put the device to sleep</string>
     <!-- Volume Key Rotation -->
     <string name="swap_volume_buttons_title">Reorient</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
@@ -125,8 +122,6 @@
     <!-- SystemUI Tuner Parts -->
     <string name="systemui_tuner_statusbar_title">Status bar items</string>
     <string name="systemui_tuner_statusbar_summary">Show/hide status bar items</string>
-    <string name="systemui_tuner_navbar_title">Navigation bar items</string>
-    <string name="systemui_tuner_navbar_summary">Edit navigation bar items</string>
     <string name="systemui_tuner_other_title">Other</string>
     <string name="pure_sys">Misc</string>
     <string name="misc_title">Other</string>
