@@ -27,9 +27,14 @@
             android:title="@string/lockscreen_settings_title"/>
 
         <PreferenceScreen
+            android:key="navigation_options"
+            android:fragment="com.pure.settings.fragments.NavbarSettings"
+            android:title="@string/navigationbar_settings_title" />
+
+        <!--<PreferenceScreen
             android:fragment="com.pure.settings.fragments.Navigation"
             android:key="pure_navigation"
-            android:title="@string/navigation_title"/>
+        android:title="@string/navigation_title"/>-->
 
         <PreferenceScreen
             android:fragment="com.pure.settings.fragments.NotificationDrawerSettings"
