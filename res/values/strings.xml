@@ -66,9 +66,8 @@
     <string name="pure_interface">Interface</string>
     <!-- Lockscreen Fragment -->
     <string name="lockscreen_settings_title">Lockscreen</string>
-    <!-- Lockscreen double tap to sleep -->
-    <string name="double_tap_sleep_anywhere_title">Double-tap to sleep anywhere</string>
-    <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on the lockscreen to put the device to sleep</string>
+    <string name="lockscreen_options_title">Lockscreen options</string>
+    <string name="lockscreen_secure_options_title">Secure Lockscreen options</string>
     <!-- Volume rocker fragment -->
     <string name="volumerocker_settings_title">Volume rocker</string>
     <!-- Navbar fragment -->
@@ -82,6 +81,9 @@
     <!-- Power fragment -->
     <string name="power_settings_title">Power</string>
 
+    <!-- Lockscreen double tap to sleep -->
+    <string name="double_tap_sleep_anywhere_title">Double-tap to sleep anywhere</string>
+    <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on the lockscreen to put the device to sleep</string>
     <!-- double tap statusbar to sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
@@ -448,4 +450,8 @@
     <string name="smartbar_config_backup_error_toast">Error saving Smartbar profile</string>
     <string name="smartbar_config_restore_error_toast">Error restoring Smartbar profile</string>
     <string name="navbar_buttons_alpha_title">Button transparency</string>
+    
+    <!-- fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
+    <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
 </resources>

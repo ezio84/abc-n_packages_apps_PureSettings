@@ -13,6 +13,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="lockscreen_secure_options"
+        android:title="@string/lockscreen_secure_options_title" >
+
+        <com.pure.settings.preferences.SystemSettingSwitchPreference
+            android:key="fingerprint_success_vib"
+            android:title="@string/fprint_sucess_vib_title"
+            android:summary="@string/fprint_sucess_vib_summary"
+            android:defaultValue="true" />
+
         <com.pure.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_scramble_pin_layout"
             android:title="@string/unlock_scramble_pin_layout_title"
@@ -22,6 +32,11 @@
             android:key="lockscreen_qs_disabled"
             android:title="@string/lockscreen_qs_disabled_title"
             android:summary="@string/lockscreen_qs_disabled_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="lockscreen_options"
+        android:title="@string/lockscreen_options_title" >
 
         <com.pure.settings.preferences.SystemSettingSwitchPreference
             android:key="double_tap_sleep_anywhere"
@@ -39,5 +54,6 @@
             android:title="@string/media_art_title"
             android:summary="@string/media_art_summary"
             android:defaultValue="true" />
+    </PreferenceCategory>
 
 </PreferenceScreen> 
