@@ -28,6 +28,12 @@
             android:title="@string/unlock_scramble_pin_layout_title"
             android:summary="@string/unlock_scramble_pin_layout_summary" />
 
+        <com.pure.settings.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_pin_ripple"
+            android:title="@string/lockscreen_pin_ripple_title"
+            android:summary="@string/lockscreen_pin_ripple_summary"
+            android:defaultValue="true" />
+
         <com.pure.settings.preferences.SecureSettingSwitchPreference
             android:key="lockscreen_qs_disabled"
             android:title="@string/lockscreen_qs_disabled_title"
