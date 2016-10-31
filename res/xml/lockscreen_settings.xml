@@ -50,6 +50,12 @@
             android:summary="@string/double_tap_sleep_anywhere_summary"
             android:defaultValue="true" />
 
+        <com.pure.settings.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_charging_current"
+            android:title="@string/lockscreen_charging_current_title"
+            android:summary="@string/lockscreen_charging_current_summary"
+            android:defaultValue="true" />
+
         <PreferenceScreen
             android:fragment="com.pure.settings.fragments.LockScreenItemsSettings"
             android:key="lockscreen_items"
