@@ -31,11 +31,6 @@
             android:fragment="com.pure.settings.fragments.NavbarSettings"
             android:title="@string/navigationbar_settings_title" />
 
-        <!--<PreferenceScreen
-            android:fragment="com.pure.settings.fragments.Navigation"
-            android:key="pure_navigation"
-        android:title="@string/navigation_title"/>-->
-
         <PreferenceScreen
             android:fragment="com.pure.settings.fragments.NotificationDrawerSettings"
             android:key="pure_notification_drawer_settings"
