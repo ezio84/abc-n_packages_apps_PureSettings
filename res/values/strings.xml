@@ -80,6 +80,8 @@
     <string name="statusbar_settings_title">Status bar</string>
     <!-- Power fragment -->
     <string name="power_settings_title">Power</string>
+    <!-- Substratum fragment -->
+    <string name="substratum_settings_title">Themes</string>
 
     <!-- Lockscreen double tap to sleep -->
     <string name="double_tap_sleep_anywhere_title">Double-tap to sleep anywhere</string>

@@ -63,6 +63,11 @@
             android:title="@string/volumerocker_settings_title"/>
 
         <PreferenceScreen
+            android:fragment="com.pure.settings.fragments.SubstratumSettings"
+            android:key="pure_substratum_settings"
+            android:title="@string/substratum_settings_title"/>
+
+        <PreferenceScreen
             android:key="systemui_tuner_other"
             android:title="@string/systemui_tuner_other_title" >
             <intent
