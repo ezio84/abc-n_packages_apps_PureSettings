@@ -26,12 +26,6 @@
     <PreferenceCategory
         android:title="@string/notifdrawer_qs_title">
 
-        <PreferenceScreen
-            android:key="status_bar_expanded_qs_settings"
-            android:title="@string/status_bar_expanded_qs_settings"
-            android:summary="@string/status_bar_expanded_qs_settings_summary"
-            android:fragment="com.pure.settings.fragments.StatusbarExpandedQSSettings" />
-
         <com.pure.settings.preferences.SystemSettingSwitchPreference
             android:key="status_bar_quick_qs_pulldown"
             android:title="@string/status_bar_quick_qs_pulldown_title"
