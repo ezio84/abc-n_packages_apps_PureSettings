@@ -45,14 +45,11 @@ public class StatusbarExpandedQSSettings extends SettingsPreferenceFragment impl
             "qs_rows_landscape";
     private static final String PREF_COLUMNS_LANDSCAPE =
             "qs_columns_landscape";
-    private static final String KEY_SYSUI_QQS_COUNT =
-            "sysui_qqs_count_key";
 
     private ListPreference mRowsPortrait;
     private ListPreference mColumnsPortrait;
     private ListPreference mRowsLandscape;
     private ListPreference mColumnsLandscape;
-    private ListPreference mSysuiQqsCount;
 
     private ContentResolver mResolver;
 
@@ -115,13 +112,6 @@ public class StatusbarExpandedQSSettings extends SettingsPreferenceFragment impl
         mColumnsLandscape.setValue(String.valueOf(columnsLandscape));
         mColumnsLandscape.setSummary(mColumnsLandscape.getEntry());
         mColumnsLandscape.setOnPreferenceChangeListener(this);
-
-        mSysuiQqsCount = (ListPreference) findPreference(KEY_SYSUI_QQS_COUNT);
-        int SysuiQqsCount = Settings.Secure.getInt(getContentResolver(),
-                Settings.Secure.QQS_COUNT, 5);
-        mSysuiQqsCount.setValue(Integer.toString(SysuiQqsCount));
-        mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntry());
-        mSysuiQqsCount.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -155,13 +145,6 @@ public class StatusbarExpandedQSSettings extends SettingsPreferenceFragment impl
             Settings.System.putInt(mResolver,
                     Settings.System.QS_COLUMNS_LANDSCAPE, intValue);
             preference.setSummary(mColumnsLandscape.getEntries()[index]);
-            return true;
-        } else if (preference == mSysuiQqsCount) {
-            String SysuiQqsCount = (String) newValue;
-            int SysuiQqsCountValue = Integer.parseInt(SysuiQqsCount);
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.QQS_COUNT, SysuiQqsCountValue);
-            int SysuiQqsCountIndex = mSysuiQqsCount.findIndexOfValue(SysuiQqsCount);
-            mSysuiQqsCount.setSummary(mSysuiQqsCount.getEntries()[SysuiQqsCountIndex]);
             return true;
         }
         return false;
