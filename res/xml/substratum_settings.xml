@@ -13,17 +13,31 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.android.settings.preference.SecureSettingSwitchPreference
-        android:key="notification_title_tint"
-        android:title="@string/notification_tint_title"
-        android:summaryOn="@string/notification_tint_summary_on"
-        android:summaryOff="@string/notification_tint_summary_off"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:title="@string/display_cat">
 
-    <com.android.settings.preference.SecureSettingSwitchPreference
-        android:key="doze_notification_invert_enabled"
-        android:title="@string/doze_notification_color_invert_title"
-        android:summaryOn="@string/doze_notification_color_invert_summary_on"
-        android:summaryOff="@string/doze_notification_color_invert_summary_off"
-        android:defaultValue="true" />
+        <ListPreference
+            android:entries="@array/screenshot_type_entries"
+            android:entryValues="@array/screenshot_type_values"
+            android:key="screenshot_type"
+            android:title="@string/screenshot_type_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/themes_cat">
+
+        <com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="notification_title_tint"
+            android:title="@string/notification_tint_title"
+            android:summaryOn="@string/notification_tint_summary_on"
+            android:summaryOff="@string/notification_tint_summary_off"
+            android:defaultValue="true" />
+
+        <com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="doze_notification_invert_enabled"
+            android:title="@string/doze_notification_color_invert_title"
+            android:summaryOn="@string/doze_notification_color_invert_summary_on"
+            android:summaryOff="@string/doze_notification_color_invert_summary_off"
+            android:defaultValue="true" />
+    </PreferenceCategory>
 </PreferenceScreen> 

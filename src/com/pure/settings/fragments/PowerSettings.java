@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The Pure Nexus Project
+ * Copyright (C) 2016 The ABC rom
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,15 +16,11 @@
 package com.pure.settings.fragments;
 
 import android.app.Activity;
-import android.app.ActivityManagerNative;
-import android.app.IActivityManager;
 import android.content.ContentResolver;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
@@ -40,9 +36,7 @@ public class PowerSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
     private static final String KEYGUARD_TOGGLE_TORCH = "keyguard_toggle_torch";
-    private static final String SCREENSHOT_TYPE = "screenshot_type";
 
-    private ListPreference mScreenshotType;
     private SwitchPreference mKeyguardTorch;
 
     @Override
@@ -69,13 +63,6 @@ public class PowerSettings extends SettingsPreferenceFragment implements
         mKeyguardTorch.setChecked((Settings.System.getInt(resolver,
                 Settings.System.KEYGUARD_TOGGLE_TORCH, 0) == 1));
         }
-
-        mScreenshotType = (ListPreference) findPreference(SCREENSHOT_TYPE);
-        int mScreenshotTypeValue = Settings.System.getInt(resolver,
-                Settings.System.SCREENSHOT_TYPE, 0);
-        mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
-        mScreenshotType.setSummary(mScreenshotType.getEntry());
-        mScreenshotType.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -83,14 +70,6 @@ public class PowerSettings extends SettingsPreferenceFragment implements
             boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.KEYGUARD_TOGGLE_TORCH, checked ? 1:0);
-            return true;
-        } else if  (preference == mScreenshotType) {
-            int mScreenshotTypeValue = Integer.parseInt(((String) objValue).toString());
-            mScreenshotType.setSummary(
-                    mScreenshotType.getEntries()[mScreenshotTypeValue]);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
-            mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
             return true;
         }
         return false;
