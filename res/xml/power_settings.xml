@@ -30,4 +30,11 @@
         android:title="@string/powermenu_lockscreen_title"
         android:summary="@string/powermenu_lockscreen_summary"
         android:defaultValue="true" />
+
+    <com.pure.settings.preferences.SystemSettingSwitchPreference
+        android:key="screenshot_type"
+        android:title="@string/screenshot_type_title"
+        android:summaryOn="@string/screenshot_type_summary_full"
+        android:summaryOff="@string/screenshot_type_summary_selected"
+        android:defaultValue="false" />
 </PreferenceScreen>

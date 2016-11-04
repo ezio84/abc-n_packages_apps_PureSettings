@@ -466,4 +466,9 @@
     <string name="doze_notification_color_invert_summary_on">Notifications will be inverted on Ambient Display. Use for light/stock themes.</string>
 
     <string name="sysui_qqs_count_title">Small QS tiles</string>
+
+    <!-- Optional screenshot type -->
+    <string name="screenshot_type_title">Screenshot type</string>
+    <string name="screenshot_type_summary_full">Take fullscreen screenshots</string>
+    <string name="screenshot_type_summary_selected">Select which part of the screen you want to screenshot</string>
 </resources>
