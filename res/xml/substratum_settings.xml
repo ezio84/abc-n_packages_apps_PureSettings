@@ -16,6 +16,11 @@
     <PreferenceCategory
         android:title="@string/display_cat">
 
+        <PreferenceScreen
+                android:key="doze_fragment"
+                android:title="@string/doze_title"
+                android:fragment="com.pure.settings.AmbientSettings" />
+
         <ListPreference
             android:entries="@array/screenshot_type_entries"
             android:entryValues="@array/screenshot_type_values"
@@ -26,14 +31,14 @@
     <PreferenceCategory
         android:title="@string/themes_cat">
 
-        <com.android.settings.preference.SecureSettingSwitchPreference
+        <com.pure.settings.preferences.SecureSettingSwitchPreference
             android:key="notification_title_tint"
             android:title="@string/notification_tint_title"
             android:summaryOn="@string/notification_tint_summary_on"
             android:summaryOff="@string/notification_tint_summary_off"
             android:defaultValue="true" />
 
-        <com.android.settings.preference.SecureSettingSwitchPreference
+        <com.pure.settings.preferences.SecureSettingSwitchPreference
             android:key="doze_notification_invert_enabled"
             android:title="@string/doze_notification_color_invert_title"
             android:summaryOn="@string/doze_notification_color_invert_summary_on"
