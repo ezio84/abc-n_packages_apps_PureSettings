@@ -469,6 +469,6 @@
 
     <!-- Optional screenshot type -->
     <string name="screenshot_type_title">Screenshot type</string>
-    <string name="screenshot_type_summary_full">Take fullscreen screenshots</string>
-    <string name="screenshot_type_summary_selected">Select which part of the screen you want to screenshot</string>
+    <string name="screenshot_type_fullscreen">Take fullscreen screenshots</string>
+    <string name="screenshot_type_partial">Drag selection on the area you want to take as screenshot</string>
 </resources>
