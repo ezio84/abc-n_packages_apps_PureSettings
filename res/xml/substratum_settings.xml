@@ -37,8 +37,9 @@
             android:title="@string/screenshot_delay_title"
             android:summary="@string/screenshot_delay_summary"
             android:max="10000"
-            settings:min="1"
-            settings:units=""
+            settings:min="100"
+            settings:interval="100"
+            settings:units="ms"
             android:persistent="false" />
     </PreferenceCategory>
 
