@@ -33,6 +33,8 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.pure.settings.preferences.CustomSeekBarPreference;
+
 import static android.provider.Settings.Secure.DOZE_ENABLED;
 
 public class SubstratumSettings extends SettingsPreferenceFragment implements
@@ -40,7 +42,9 @@ public class SubstratumSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_DOZE_FRAGMENT = "doze_fragment";
     private static final String SCREENSHOT_TYPE = "screenshot_type";
+    private static final String SCREENSHOT_DELAY = "screenshot_delay";
 
+    private CustomSeekBarPreference mScreenshotDelay;
     private ListPreference mScreenshotType;
     private PreferenceScreen mDozeFragement;
 
@@ -64,16 +68,30 @@ public class SubstratumSettings extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(mDozeFragement);
             mDozeFragement = null;
         }
+
+        mScreenshotDelay = (CustomSeekBarPreference) findPreference(SCREENSHOT_DELAY);
+        int screenshotDelay = Settings.System.getInt(resolver,
+                Settings.System.SCREENSHOT_DELAY, 1000);
+        mScreenshotDelay.setValue(screenshotDelay / 1);
+        mScreenshotDelay.setOnPreferenceChangeListener(this);
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        final Activity activity = getActivity();
+        final ContentResolver resolver = activity.getContentResolver();
         if  (preference == mScreenshotType) {
             int mScreenshotTypeValue = Integer.parseInt(((String) objValue).toString());
             mScreenshotType.setSummary(
                     mScreenshotType.getEntries()[mScreenshotTypeValue]);
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
             mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
+            return true;
+        } else if (preference == mScreenshotDelay) {
+            int screenshotDelay = (Integer) objValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.SCREENSHOT_DELAY, screenshotDelay * 1);
             return true;
         }
         return false;

@@ -506,4 +506,9 @@
     <string name="four_second">4 s</string>
     <string name="fourhalf_second">4.5 s</string>
     <string name="five_second">5 s</string>
+
+    <!-- Screenshot delay -->
+    <string name="screenshot_options_category">Screenshot options</string>
+    <string name="screenshot_delay_title">Screenshot delay</string>
+    <string name="screenshot_delay_summary">Adjust the time for when a screenshot is captured</string>
 </resources>
