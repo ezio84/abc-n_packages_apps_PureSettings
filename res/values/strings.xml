@@ -81,9 +81,8 @@
     <!-- Power fragment -->
     <string name="power_settings_title">Power</string>
     <!-- Substratum fragment -->
-    <string name="substratum_settings_title">Display and Themes</string>
+    <string name="substratum_settings_title">Display</string>
     <string name="display_cat">Display</string>
-    <string name="themes_cat">Themes</string>
 
     <!-- Lockscreen double tap to sleep -->
     <string name="double_tap_sleep_anywhere_title">Double-tap to sleep anywhere</string>
@@ -456,16 +455,6 @@
     <!-- Lockscreen charging current indicator  -->
     <string name="lockscreen_charging_current_title">Lockscreen charging info</string>
     <string name="lockscreen_charging_current_summary">Display negociated charger max current and voltage on lockscreen</string>
-
-    <!-- Dynamic notification tint -->
-    <string name="notification_tint_title">Dynamic notification title color</string>
-    <string name="notification_tint_summary_off">Title color on notification will be handled by the theme. A SystemUI restart is required when changing this.</string>
-    <string name="notification_tint_summary_on">Title color on notification will be taken from app icon color. A SystemUI restart is required when changing this.</string>
-
-    <!-- Doze color inversion -->
-    <string name="doze_notification_color_invert_title">Doze notification inversion</string>
-    <string name="doze_notification_color_invert_summary_off">Notifications will not be inverted on Ambient Display. Use for dark themes.</string>
-    <string name="doze_notification_color_invert_summary_on">Notifications will be inverted on Ambient Display. Use for light/stock themes.</string>
 
     <string name="sysui_qqs_count_title">Small QS tiles</string>
 
