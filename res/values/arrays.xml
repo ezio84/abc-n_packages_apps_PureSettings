@@ -190,19 +190,6 @@
         <item>5000</item>
     </string-array>
 
-    <!-- show battery percent -->
-    <string-array name="entries_battery_percent" translatable="false">
-        <item>@string/battery_percent_none</item>
-        <item>@string/battery_percent_always</item>
-        <!-- <item>@string/battery_percent_expanded</item>-->
-    </string-array>
-
-    <string-array name="values_battery_percent" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <!-- <item>2</item>-->
-    </string-array>
-
     <!-- Lock Clock Fonts -->
     <string-array name="lock_clock_fonts_entries" translatable="false">
         <item>@string/lock_clock_font_normal</item>

@@ -14,12 +14,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceScreen
-        android:key="statusbar_battery"
-        android:title="@string/battery_title"
-        android:summary="@string/statusbar_battery_summary"
-        android:fragment="com.pure.settings.fragments.StatusbarBatterySettings" />
-
-    <PreferenceScreen
         android:key="systemui_tuner_statusbar"
         android:title="@string/systemui_tuner_statusbar_title"
         android:summary="@string/systemui_tuner_statusbar_summary" >
