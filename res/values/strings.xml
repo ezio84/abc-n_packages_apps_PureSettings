@@ -498,4 +498,8 @@
     <string name="force_charge_battery_text_title">Show percentage near battery when charging</string>
     <string name="force_charge_battery_text_summary_on">Show the battery percentage outside the icon when charging</string>
     <string name="force_charge_battery_text_summary_off">Show the battery percentage inside the icon when charging</string>
+
+    <!-- Wake on Plug -->
+    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
 </resources>
