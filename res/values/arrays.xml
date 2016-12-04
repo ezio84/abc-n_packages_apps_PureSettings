@@ -411,4 +411,17 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+
+    <!-- Sms security limit -->
+    <string-array name="sms_outgoing_check_max_count_entries" translatable="false">
+        <item>@string/sms_outgoing_check_max_count_default</item>
+        <item>@string/sms_outgoing_check_max_count_hundred</item>
+        <item>@string/sms_outgoing_check_max_count_sixhundred</item>
+    </string-array>
+
+    <string-array name="sms_outgoing_check_max_count_values" translatable="false">
+        <item>30</item>
+        <item>100</item>
+        <item>600</item>
+    </string-array>
 </resources>
